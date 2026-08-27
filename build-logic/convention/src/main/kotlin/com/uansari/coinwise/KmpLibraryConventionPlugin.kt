@@ -14,7 +14,7 @@ class KmpLibraryConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
 
         require(path.startsWith(":shared:")) {
-            "coinwise.kmp.library is for shared/* modules only. " + "$path is Android-tier — use coinwise.android.library."
+            "coinwise.kmp.library is for shared/* modules only. $path is Android-tier — use coinwise.android.library."
         }
 
         pluginManager.apply("org.jetbrains.kotlin.multiplatform")
@@ -39,7 +39,7 @@ class KmpLibraryConventionPlugin : Plugin<Project> {
             androidExt.minSdk = minSdkVersion
             androidExt.withHostTest { }
 
-            jvmToolchain(17)
+            jvmToolchain(21)
 
             iosArm64()
             iosSimulatorArm64()
@@ -69,12 +69,10 @@ class KmpLibraryConventionPlugin : Plugin<Project> {
             nonJvmTargetNames.set(
                 provider {
                     kmpExtension.targets.filter {
-                            it.platformType.name !in setOf(
-                                "jvm",
-                                "androidJvm",
-                                "common"
-                            )
-                        }.map { it.name }
+                        it.platformType.name !in setOf(
+                            "jvm", "androidJvm", "common"
+                        )
+                    }.map { it.name }
                 })
         }
 

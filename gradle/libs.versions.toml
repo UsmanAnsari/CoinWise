@@ -6,7 +6,7 @@ ksp = "2.3.10"
 
 android-compile-sdk = "37"
 android-min-sdk = "28"
-android-target-sdk = "36"
+android-target-sdk = "37"
 
 # Core KMP
 kotlinx-coroutines = "1.11.0"
@@ -16,14 +16,14 @@ bignum = "0.3.10"
 ktor = "3.5.2"
 
 # Storage & Persistence
-androidx-room = "3.0.1"
+androidx-room = "3.0.2"
 androidx-sqlite = "2.7.0"
 androidx-datastore = "1.2.1"
 androidx-paging = "3.5.1"
 
 # Android UI & Architecture
 compose-bom = "2026.08.00"
-navigation = "2.9.8"
+navigation = "2.10.0"
 hilt = "2.60.1"
 androidx-hilt = "1.4.0"
 androidx-activity = "1.13.0"
@@ -31,12 +31,12 @@ androidx-appcompat = "1.8.0"
 androidx-core = "1.19.0"
 androidx-lifecycle = "2.11.0"
 androidx-workmanager = "2.11.2"
-androidx-glance = "1.1.1"
+androidx-glance = "1.2.0"
 androidx-biometric = "1.4.0-alpha02"
 sqlcipher = "4.18.0"
 
 # Third-Party UI
-coil = "3.5.0"
+coil = "3.6.0"
 vico = "2.5.2"
 
 # Testing
